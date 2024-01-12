@@ -1,0 +1,43 @@
+/*----- Initialisation du fichier CSS ------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*----------------  Style barre de navigation ---------------------*/
+
+.style-header{
+    width: 100%;
+    background-color: black;
+}
+
+.ul-navbar-header{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.style-li-navbar-header{
+    width: 25%;
+    text-align: center;
+}
+
+.lien-navbar{
+    text-decoration: none;
+    color: white;
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+/*---------- Annimation navbar ---------------*/
+
+.style-li-navbar-header:hover{
+    background-color: #ED017F;
+}
+
+.lien-navbar:hover{
+    color: black;
+}
