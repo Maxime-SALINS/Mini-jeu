@@ -156,3 +156,11 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.slider div {
+    display: none;
+}
+
+.infojeu.active {
+    display: block;
+}
