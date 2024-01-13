@@ -6,9 +6,42 @@
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
-/*----------------  Style barre de navigation ---------------------*/
+/*-------------------------------------------- Style header ---------------------------------------------------*/
 
 .style-header{
+    width: 100%;
+    background-color: #ED017F;
+}
+
+/*---------------- Style logo et titre du site -------------------*/
+
+.style-logo-nom{
+    display: flex;
+    align-items: center;
+}
+
+.style-logo-nom > h1 {
+    width: 96%;
+    font-family: 'Bungee', sans-serif;
+    font-size: 180%;
+    text-align: center;
+    text-shadow: 2px 2px 4px #09D4C1;
+}
+
+.style-logo-nom > a {
+    width: 4%;
+    margin: 0.3%;
+}
+
+.logo{
+    width: 100%;
+    border: 3px solid black;
+    border-radius: 300%;
+}
+
+/*---------------- Style barre de navigation ---------------------*/
+
+.navbar-header{
     width: 100%;
     background-color: black;
 }
@@ -40,4 +73,5 @@
 
 .lien-navbar:hover{
     color: black;
+    text-shadow: 2px 2px 4px #F5ED42;
 }
