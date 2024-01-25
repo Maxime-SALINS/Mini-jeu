@@ -22,26 +22,21 @@ body{
 /*---------------- Style logo et titre du site -------------------*/
 
 .style-logo-nom{
-    display: flex;
-    align-items: center;
+    position: relative;
 }
 
 .style-logo-nom > h1 {
-    width: 96%;
     font-family: 'Bungee', sans-serif;
     font-size: 180%;
-    font-size: calc(0.5rem + 1.5vw);
     text-align: center;
     text-shadow: 2px 2px 4px #09D4C1;
 }
 
-.style-logo-nom > a {
-    width: 4%;
-    margin: 0.3%;
-}
-
 .logo{
-    width: 100%;
+    position: absolute;
+    width: 4%;
+    top: 9%;
+    left: 1%;
     border: 3px solid black;
     border-radius: 300%;
 }
@@ -406,12 +401,11 @@ section > h2{
 @media screen and (max-width: 768px) {
     /*------------------- Responsive Header ------------------*/
     .style-logo-nom > h1 {
-        width: 91%;
+        font-size: medium;
     }
 
-    .style-logo-nom > a {
-        width: 9%;
-        margin: 1%;
+    .logo {
+        width: 8%;
     }
 
     /*------------------- Responsive Navbar/ Burger menu -----------------*/
@@ -456,7 +450,7 @@ section > h2{
         padding: 4%;
     }
 
-    .box > h2 , .dispo-section > h2 , .style-footer > h2{
+    .box > h2 , .dispo-section > h2 , .style-footer > h2 , section > h2{
         font-size: 100%;
     }
 
