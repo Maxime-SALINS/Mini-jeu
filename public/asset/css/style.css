@@ -30,6 +30,7 @@ body{
     width: 96%;
     font-family: 'Bungee', sans-serif;
     font-size: 180%;
+    font-size: calc(0.5rem + 1.5vw);
     text-align: center;
     text-shadow: 2px 2px 4px #09D4C1;
 }
@@ -397,6 +398,61 @@ section > h2{
 .lien-footer:hover{
     color: white;
     text-shadow: 2px 2px 4px #09D4C1;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------- Style Responsive --------------------------------*/
+
+@media screen and (max-width: 768px) {
+    /*------------------- Responsive Header ------------------*/
+    .style-logo-nom > h1 {
+        width: 91%;
+    }
+
+    .style-logo-nom > a {
+        width: 9%;
+        margin: 1%;
+    }
+
+    /*------------------- Responsive Navbar/ Burger menu -----------------*/
+    #icons {
+        display: block;
+        position: absolute;
+        top : 1.5%;
+        right: 5%;
+    }
+
+    #icons::before {
+        content: "\2630";
+    }
+
+    .Active #icons::before {
+        content: "\2715";
+    }
+
+    .navbar-header .ul-navbar-header {
+        position: fixed;
+        left: -100%;
+        top: 6%;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        transition: 0.25s;
+    }
+
+    .navbar-header .style-li-navbar-header {
+        width: 100%;
+        padding: 3px 0;
+    }
+
+    .navbar-header .style-li-navbar-header:hover{
+        background-color: #ED017F;
+    }
+
+    .navbar-header.Active .ul-navbar-header {
+        left: 0;
+    }
 }
 
 /*----- annimation des bordures de présentation des jeu et de l'image perso -----*/
