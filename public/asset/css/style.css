@@ -323,7 +323,6 @@ section > h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .sommaire{
@@ -447,10 +446,6 @@ section > h2{
         padding: 3px 0;
     }
 
-    .navbar-header .style-li-navbar-header:hover{
-        background-color: #ED017F;
-    }
-
     .navbar-header.Active .ul-navbar-header {
         left: 0;
     }
@@ -461,12 +456,62 @@ section > h2{
         padding: 4%;
     }
 
-    .box > h2{
-        font-size: small;
+    .box > h2 , .dispo-section > h2 , .style-footer > h2{
+        font-size: 100%;
     }
 
     .box > p{
+        font-size: 80%;
+    }
+
+    /*------------------- Responsive section présentation auteur du site -------------------*/
+
+    .dispo-section{
+        width: 100%;
+        margin: 5% 0%;
+        padding: 5%;
+    }
+
+    .info-card{
+        display: inline;
+    }
+
+    .info-card > p{
+        width: 100%;
+    }
+
+    .dispo-img{
+        width: 50%;
+        margin: 5% auto;
+    }
+
+    /*------------------- Responsive footer -------------------*/
+    .box-footer{
+        display: inline;
+    }
+
+    .sommaire , .contact{
+        margin: auto;
+    }
+
+    #lien-contact , .contact > h4 {
         font-size: small;
+    }
+
+    .ul-reseaux > li{
+        width: 50%;
+    }
+
+    #logo1 {
+        width: 60%;
+    }
+
+    #logo2 {
+        width: 75%;
+    }
+
+    .style-footer > p {
+        font-size: x-small;
     }
 }
 
