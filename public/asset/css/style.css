@@ -72,6 +72,11 @@ body{
     font-weight: bolder;
 }
 
+#icons {
+    cursor: pointer;
+    display: none;
+}
+
 /*---------- Annimation navbar ---------------*/
 
 .style-li-navbar-header:hover{
