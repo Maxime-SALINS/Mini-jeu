@@ -1,4 +1,53 @@
 /*--------- Style formulaire de contact -----------------*/
 .dispo-formulaire{
-    display: inline;
+    text-align: center;
+}
+
+.section-formulaire > h2{
+    text-align: center;
+    font-family: 'Bungee', sans-serif;
+    color: #3DA603;
+    margin: 1.5%;
+}
+
+.dispo-label-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.style-label {
+    font-family: 'Bungee', sans-serif;
+}
+
+.input-form{
+    width: 40%;
+    margin : 0.5% 0%;
+    padding: 0.5%;
+    background-color: rgb(181, 181, 181);
+    border: 5px solid #1D3D51;
+    border-radius: 10px;
+}
+
+#message {
+    width: 40%;
+    height: 200px;
+    margin : 0.5% 0%;
+    padding: 0.5%;
+    background-color: rgb(181, 181, 181);
+    border: 5px solid #1D3D51;
+    border-radius: 10px;
+}
+
+#submitButton{
+    padding: 1% 2%;
+    background-color: #1D3D51;
+    color: white;
+    border: 3px solid rgb(181, 181, 181);
+}
+
+#submitButton:hover{
+    background-color: #A503A6;
+    color: black;
+    border: 3px solid black;
 }

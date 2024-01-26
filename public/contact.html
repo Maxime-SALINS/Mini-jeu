@@ -38,35 +38,50 @@
             <div id="icons"></div>
         </nav>
     </header>
-    <section>
+    <section class="section-formulaire">
         <h2>Formulaire de contact</h2>
-        <form class="dispo-formulaire" action="">
-            <div>
-                <label for="nom">VOTRE NOM</label>
-                <input type="text">
+        <form class="dispo-formulaire" action="#">
+            <div class="dispo-label-input">
+                <div>
+                    <label class="style-label" for="nom">VOTRE NOM</label>
+                </div>
+                <div>
+                    <input id="name" class="input-form" type="text" placeholder="VOTRE NOM">
+                </div>
             </div>
-            <div>
-                <label for="prenom">VOTRE PRENOM</label>
-                <input type="text">
+            <div class="dispo-label-input">
+                <div>
+                    <label class="style-label" for="prenom">VOTRE PRENOM</label>
+                </div>
+                <div>
+                    <input id="firstname" class="input-form" type="text" placeholder="VOTRE PRENOM">
+                </div>
             </div>
-            <div>
-                <label for="email">VOTRE EMAIL</label>
-                <input type="email">
+            <div class="dispo-label-input">
+                <div>
+                    <label class="style-label" for="email">VOTRE EMAIL</label>
+                </div>
+                <div>
+                    <input class="input-form" id="email" type="email" placeholder="VOTRE EMAIL">
+                </div>
             </div>
-            <div>
-                <label for="sujet">SUJET</label>
-                <select name="sujet" id="">
-                    <option value=""></option>
-                    <option value="">J'ai une question a propos des jeux</option>
-                    <option value="">Proposition d'amélioration</option>
-                    <option value="">Echanger avec le support</option>
-                    <option value="">Autre question</option>
-                </select>
+            <div class="dispo-label-input">
+                <div>
+                    <label class="style-label" for="sujet">SUJET</label>
+                </div>
+                <div>
+                    <input id="subject" class="input-form"  type="text" placeholder="SUJET">
+                </div>
             </div>
-            <div>
-                <label for="message-text">VOTRE MESSAGE</label>
-                <textarea name="message"></textarea>
+            <div class="dispo-label-input">
+                <div>
+                    <label class="style-label" for="message-text">VOTRE MESSAGE</label>
+                </div>
+                <div>
+                    <textarea id="message" name="message" placeholder="VOTRE MESSAGE"></textarea>
+                </div>
             </div>
+            <button id="submitButton" type="submit">Envoyer</button>
         </form>
     </section>
     <footer class="style-footer">

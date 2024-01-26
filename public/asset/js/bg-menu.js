@@ -1,6 +1,6 @@
 const links = document.querySelectorAll(".style-li-navbar-header");
 const nav = document.getElementById("navbar-header");
-console.log(links);
+// console.log(links);
 
 icons.addEventListener("click", () => {
     nav.classList.toggle("Active");
