@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
 /*----- Initialisation du fichier CSS ------*/
 *{
@@ -8,7 +9,7 @@
 }
 
 body{
-    background-color: #0466A5;
+    background-color: #0367A6;
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
@@ -16,7 +17,7 @@ body{
 
 .style-header{
     width: 100%;
-    background-color: #ED017F;
+    background-color: #A503A6;
 }
 
 /*---------------- Style logo et titre du site -------------------*/
@@ -65,7 +66,6 @@ body{
     color: white;
     font-family: 'Bungee', sans-serif;
     font-size: 90%;
-    font-weight: bolder;
 }
 
 #icons {
@@ -76,12 +76,12 @@ body{
 /*---------- Annimation navbar ---------------*/
 
 .style-li-navbar-header:hover{
-    background-color: #ED017F;
+    background-color: #A503A6;
 }
 
 .lien-navbar:hover{
     color: black;
-    text-shadow: 2px 2px 4px #F5ED42;
+    text-shadow: 3px 3px 5px #F5ED42;
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
@@ -105,13 +105,13 @@ body{
 .box > h2 {
     text-align: center;
     font-family: 'Bungee', sans-serif;
-    color: #09D4C1;
-    text-shadow: 2px 2px 4px #6DD42D;
+    color: #3DA603;
 }
 
 .box > p {
     color: white;
     margin: 1%;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
 }
 
@@ -122,11 +122,11 @@ body{
 
 /*--------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------- Style présentation des jeux ---------------------------------------------*/
-section > h2{
+.section-carousel > h2{
     text-align: center;
     font-family: 'Bungee', sans-serif;
-    color: #09D4C1;
-    text-shadow: 2px 2px 4px #6DD42D;
+    color: #1D3D51;
+    text-shadow: 2px 2px 4px #3DA603;
     margin: 1.5%;
 }
 
@@ -144,20 +144,20 @@ section > h2{
 
 .infojeu > h3{
     font-family: 'Bungee', sans-serif;
-    color: #F5ED42;
-    text-shadow: 2px 2px 4px #09D4C1;
+    color: #3DA603;
 }
 
 .infojeu > p {
     text-align: justify;
+    font-family: 'Open Sans', sans-serif;
     color: white;
     margin: 1% 0 3% 0;
 }
 
 .style-a-carou{
     text-decoration: none;
-    color: white;
-    background-color: #09D4C1;
+    color: black;
+    background-color: #0367A6;
     font-family: 'Bungee', sans-serif;
     font-size: 85%;
     border: 2px solid white;
@@ -168,12 +168,13 @@ section > h2{
 #prev{
     position: absolute;
     top: 50% ;
-    left: 5%;
+    left: 8%;
     font-family: 'Bungee', sans-serif;
-    background-color: #ED017F;
+    background-color: #A503A6;
     border: 2px solid black;
     border-radius: 50px;
     padding: 0.5%;
+    transform: translate(-50% , -50%);
 }
 
 #next{
@@ -181,27 +182,20 @@ section > h2{
     top: 50%;
     right: 5%;
     font-family: 'Bungee', sans-serif;
-    background-color: #ED017F;
+    background-color: #A503A6;
     border: 2px solid black;
     border-radius: 50px;
     padding: 0.5%;
+    transform: translate(-50% , -50%);
 }
 
 /*-----------  Annimation sur la div "card" de présentation des jeux ----------------------*/
 
 .style-a-carou:hover {
-    background-color: #F5ED42;
-    border: 2px solid #ED017F;
-    color: black;
-    text-shadow: 2px 2px 4px #09D4C1;
+    background-color: #A503A6;
 }
 
-#next:hover{
-    text-shadow: 2px 2px 4px #F5ED42;
-    border: 4px solid black;
-}
-
-#prev:hover{
+#next:hover , #prev:hover{
     text-shadow: 2px 2px 4px #F5ED42;
     border: 4px solid black;
 }
@@ -264,9 +258,17 @@ section > h2{
     justify-content: center;
     position: relative;
 }
+.dispo-section > h2 {
+    text-align: center;
+    font-family: 'Bungee', sans-serif;
+    color: #1D3D51;
+    text-shadow: 2px 2px 4px #3DA603;
+    margin: 1.5%;
+}
 
 .info-card > p {
     width: 60%;
+    font-family: 'Open Sans', sans-serif;
     text-align: justify;
     color: white;
 }
@@ -302,7 +304,7 @@ section > h2{
 /*---------------------- Style footer -----------------*/
 
 .style-footer{
-    background-color: #ED017F;
+    background-color: #A503A6;
     margin-top: 2%;
     padding: 1%;
     border-top: 3px solid black;
@@ -450,7 +452,7 @@ section > h2{
         padding: 4%;
     }
 
-    .box > h2 , .dispo-section > h2 , .style-footer > h2 , section > h2{
+    .box > h2 , .dispo-section > h2 , .style-footer > h2 , .section-carousel > h2{
         font-size: 100%;
     }
 
