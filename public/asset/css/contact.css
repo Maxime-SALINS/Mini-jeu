@@ -29,7 +29,7 @@
     border-radius: 10px;
 }
 
-#message {
+.message {
     width: 40%;
     height: 200px;
     margin : 0.5% 0%;
@@ -40,6 +40,7 @@
 }
 
 #submitButton{
+    margin: 1% 0%;
     padding: 1% 2%;
     background-color: #1D3D51;
     color: white;
@@ -50,4 +51,57 @@
     background-color: #A503A6;
     color: black;
     border: 3px solid black;
+}
+
+/*------------------------ Style validation des champs du formulaire ------------------------*/
+
+.is-valid{
+    border-color : green;
+}
+
+.check-valid{
+    color: green;
+}
+
+.is-invalid{
+    border-color: red;
+}
+
+.check-invalid{
+    color: red;
+}
+
+/* ------------------------------ Position des symboles ---------------------------*/
+#div-name , #div-firstname , #div-email , #div-subject , #div-message{
+    position: relative;
+}
+
+#input-name-check , #input-firstname-check , #input-email-check , #input-subject-check{
+    position: absolute;
+    top: 28%;
+    left: 68.5%;
+}
+
+#input-message-check{
+    position: absolute;
+    top : 7%;
+    left: 68.5%;
+}
+
+/*-------------- Responsive ---------------*/
+
+@media  screen and (max-width: 768px){
+
+    .section-formulaire > h2{
+        font-size: 120%;
+    }
+
+    .input-form , .message{
+        width: 75%;
+    }
+
+    #submitButton{
+        padding: 2% 4%;
+        margin: 3% 0%;
+    }
 }

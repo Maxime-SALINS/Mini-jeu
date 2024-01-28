@@ -40,45 +40,50 @@
     </header>
     <section class="section-formulaire">
         <h2>Formulaire de contact</h2>
-        <form class="dispo-formulaire" action="#">
+        <form id="formulaire" class="dispo-formulaire" action="#">
             <div class="dispo-label-input">
                 <div>
                     <label class="style-label" for="nom">VOTRE NOM</label>
                 </div>
-                <div>
-                    <input id="name" class="input-form" type="text" placeholder="VOTRE NOM">
+                <div id="div-name">
+                    <input id="name" class="input-form" type="text" placeholder="VOTRE NOM"/>
+                    <div id="input-name-check"></div>
                 </div>
             </div>
             <div class="dispo-label-input">
                 <div>
                     <label class="style-label" for="prenom">VOTRE PRENOM</label>
                 </div>
-                <div>
+                <div id="div-firstname">
                     <input id="firstname" class="input-form" type="text" placeholder="VOTRE PRENOM">
+                    <div id="input-firstname-check"></div>
                 </div>
             </div>
             <div class="dispo-label-input">
                 <div>
                     <label class="style-label" for="email">VOTRE EMAIL</label>
                 </div>
-                <div>
+                <div id="div-email">
                     <input class="input-form" id="email" type="email" placeholder="VOTRE EMAIL">
+                    <div id="input-email-check"></div>
                 </div>
             </div>
             <div class="dispo-label-input">
                 <div>
                     <label class="style-label" for="sujet">SUJET</label>
                 </div>
-                <div>
+                <div id="div-subject">
                     <input id="subject" class="input-form"  type="text" placeholder="SUJET">
+                    <div id="input-subject-check"></div>
                 </div>
             </div>
             <div class="dispo-label-input">
                 <div>
                     <label class="style-label" for="message-text">VOTRE MESSAGE</label>
                 </div>
-                <div>
-                    <textarea id="message" name="message" placeholder="VOTRE MESSAGE"></textarea>
+                <div id="div-message">
+                    <textarea id="message" class="message" name="message" placeholder="VOTRE MESSAGE"></textarea>
+                    <div id="input-message-check"></div>
                 </div>
             </div>
             <button id="submitButton" type="submit">Envoyer</button>
@@ -120,7 +125,14 @@
         </div>
         <p>Maxime SALINS - Copyright © 2024 - Tous droits réservés</p>
     </footer>
+
+    <!-- Script pour l'envoie d'email de la page contact -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- Script pour le burger menu -->
     <script src="asset/js/bg-menu.js"></script>
+
+    <!-- Script pour la gestion des Regex et de récupération des informations -->
     <script src="asset/js/contact.js"></script>
 </body>
 </html>
