@@ -104,4 +104,15 @@
         padding: 2% 4%;
         margin: 3% 0%;
     }
+
+    #input-name-check , #input-firstname-check , #input-email-check , #input-subject-check{
+        top: 18%;
+        left: 82%;
+    }
+
+    #input-message-check{
+        position: absolute;
+        top : 3%;
+        left: 82%;
+    }
 }

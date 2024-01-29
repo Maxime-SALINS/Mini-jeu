@@ -437,6 +437,7 @@ body{
         width: 100%;
         text-align: center;
         transition: 0.25s;
+        z-index: 3;
     }
 
     .navbar-header .style-li-navbar-header {
