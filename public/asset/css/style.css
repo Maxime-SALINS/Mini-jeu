@@ -484,6 +484,20 @@ body{
         margin: 5% auto;
     }
 
+    /*------------------- Responsive carousel -----------------*/
+    
+    .infojeu{
+        width: 90%;
+    }
+
+    .dispo-lien{
+        margin: 3% 0%;
+    }
+
+    #prev , #next {
+        display: none;
+    }
+
     /*------------------- Responsive footer -------------------*/
     .box-footer{
         display: inline;
