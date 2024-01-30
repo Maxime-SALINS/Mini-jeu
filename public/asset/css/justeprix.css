@@ -1,0 +1,78 @@
+/*------------------------- Style de la page du jeu justeprix ------------------*/
+
+/*--------------- Style titre section du jeu ---------------*/
+
+section > h2 {
+    text-align: center;
+    font-family: 'Bungee', sans-serif;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    margin: 1.5%;
+}
+
+/*---------------- Style image jeu du juste prix ----------------*/
+
+.dispo-img-jeu {
+    margin: 2% auto;
+    text-align: center;
+    width: 20%;
+}
+
+.img-jeu{
+    width: 100%;
+}
+
+/*--------------- Style carte régles du jeu -------------------*/
+
+.dispo-régles{
+    width: 50%;
+    text-align: justify;
+    margin: 2% auto;
+    background-color: black;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    padding: 2%;
+}
+
+/*--------------- Style bouton pour jouer -----------------*/
+
+.dispo-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4% 0%;
+}
+
+.style-btn{
+    padding: 1% 3%;
+    font-family: 'Bungee', sans-serif;
+    font-weight: bolder;
+    color: white;
+    background-color: #1D3D51;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.style-btn:hover{
+    color: black;
+    border: 2px solid black;
+}
+
+/*------------------ Responsive de la page ----------------*/
+
+@media  screen and (max-width: 768px){
+
+    section > h2{
+        font-size: medium;
+    }
+
+    .dispo-img-jeu{
+        width: 35%;
+    }
+
+    .dispo-régles{
+        width: 95%;
+        font-size: 90%;
+        padding: 5%;
+    }
+}

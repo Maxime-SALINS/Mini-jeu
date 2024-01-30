@@ -6,7 +6,8 @@
 .section-formulaire > h2{
     text-align: center;
     font-family: 'Bungee', sans-serif;
-    color: #3DA603;
+    color: white;
+    text-shadow: 3px 3px 5px black;
     margin: 1.5%;
 }
 
@@ -83,6 +84,7 @@
 }
 
 #input-message-check{
+    position: absolute;
     top : 7%;
     left: 68.5%;
 }
@@ -110,7 +112,6 @@
     }
 
     #input-message-check{
-        position: absolute;
         top : 3%;
         left: 82%;
     }
