@@ -1,8 +1,5 @@
 // Jeu du loto
 
-let UserChoice = window.parseInt(prompt("Combien de chiffre voulez-vous générer aléatoirement ?"))
-let User = window.parseInt(prompt("Combien de chiffre étoiles voulez-vous générer aléatoirement ?"))
-
 function LotoGames (number , starnumber) {
     let RandomArray = [];
     let StarRandomArray = [];
@@ -25,6 +22,10 @@ function LotoGames (number , starnumber) {
     
     console.log(RandomArray);
     console.log(StarRandomArray);
-}
+};
 
-LotoGames(UserChoice , User);
+function lotoPlay() {
+    let UserChoice = window.parseInt(prompt("Combien de chiffre voulez-vous générer aléatoirement ?"));
+    let User = window.parseInt(prompt("Combien de chiffre étoiles voulez-vous générer aléatoirement ?"));
+    LotoGames(UserChoice , User);
+};
