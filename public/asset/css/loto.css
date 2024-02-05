@@ -59,6 +59,14 @@
 
 /*------------------ Style grille du loto ------------------*/
 
+.section-jeu{
+    display: none;
+}
+
+.section-jeu.valid{
+    display: block;
+}
+
 .section-jeu > h2 {
     text-align: center;
     font-family: 'Bungee', sans-serif;
@@ -67,8 +75,18 @@
     margin: 1.5%;
 }
 
+.style-btn-first{
+    padding: 2% 2.74%;
+    border-radius: 300%;
+    color: white;
+    font-weight: bold;
+    background-color: #1D3D51;
+    border: none;
+    cursor: pointer;
+}
+
 .style-btn-loto{
-    padding: 1% 1.4%;
+    padding: 2% 2%;
     border-radius: 300%;
     color: white;
     font-weight: bold;
@@ -78,7 +96,17 @@
 }
 
 .style-btn-stars{
-    padding: 1% 1.4%;
+    padding: 2% 2%;
+    border-radius: 300%;
+    color: black;
+    font-weight: bold;
+    background-color: #F5ED42;
+    border: none;
+    cursor: pointer;
+}
+
+.style-btn-stars-f{
+    padding: 2% 2.5%;
     border-radius: 300%;
     color: black;
     font-weight: bold;
@@ -88,13 +116,39 @@
 }
 
 .active{
-    padding: 1% 1.4%;
+    padding: 2% 2%;
     border-radius: 300%;
     color: black;
     font-weight: bold;
     background-color: #A503A6;
     border: none;
     cursor: pointer;
+}
+
+.dispo-ticket-loto{
+    display: flex;
+    align-items: center;
+}
+
+.liste-chiffres{
+    width: 50%;
+    text-align: center;
+}
+
+.liste-chiffres > h3 {
+    font-family: 'Bungee', sans-serif;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    margin: 1.5%;
+}
+
+.container-btn{
+    width: 75%;
+    margin: auto;
+}
+
+.ligne{
+    margin: 3% 0%;
 }
 
 /*------------------ Responsive de la page ----------------*/

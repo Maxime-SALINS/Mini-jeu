@@ -51,78 +51,98 @@
             </p>
         </div>
         <div class="dispo-btn">
-            <button onclick="lotoPlay()" class="style-btn" type="button">Jouer</button>
+            <button id="btnJeu" class="style-btn" type="button">Jouer</button>
         </div>
     </section>
     <section class="section-jeu">
         <h2>Ticket</h2>
-        <h3>Choisisez 5 chiffres</h3>
-        <div>
-            <button class="style-btn-loto" type="button">1</button>
-            <button class="style-btn-loto" type="button">2</button>
-            <button class="style-btn-loto" type="button">3</button>
-            <button class="style-btn-loto" type="button">4</button>
-            <button class="style-btn-loto" type="button">5</button>
-            <button class="style-btn-loto" type="button">6</button>
-            <button class="style-btn-loto" type="button">7</button>
-            <button class="style-btn-loto" type="button">8</button>
-            <button class="style-btn-loto" type="button">9</button>
-            <button class="style-btn-loto" type="button">10</button>
-            <button class="style-btn-loto" type="button">11</button>
-            <button class="style-btn-loto" type="button">12</button>
-            <button class="style-btn-loto" type="button">13</button>
-            <button class="style-btn-loto" type="button">14</button>
-            <button class="style-btn-loto" type="button">15</button>
-            <button class="style-btn-loto" type="button">16</button>
-            <button class="style-btn-loto" type="button">17</button>
-            <button class="style-btn-loto" type="button">18</button>
-            <button class="style-btn-loto" type="button">19</button>
-            <button class="style-btn-loto" type="button">20</button>
-            <button class="style-btn-loto" type="button">21</button>
-            <button class="style-btn-loto" type="button">22</button>
-            <button class="style-btn-loto" type="button">23</button>
-            <button class="style-btn-loto" type="button">24</button>
-            <button class="style-btn-loto" type="button">25</button>
-            <button class="style-btn-loto" type="button">26</button>
-            <button class="style-btn-loto" type="button">27</button>
-            <button class="style-btn-loto" type="button">28</button>
-            <button class="style-btn-loto" type="button">29</button>
-            <button class="style-btn-loto" type="button">30</button>
-            <button class="style-btn-loto" type="button">31</button>
-            <button class="style-btn-loto" type="button">32</button>
-            <button class="style-btn-loto" type="button">33</button>
-            <button class="style-btn-loto" type="button">34</button>
-            <button class="style-btn-loto" type="button">35</button>
-            <button class="style-btn-loto" type="button">36</button>
-            <button class="style-btn-loto" type="button">37</button>
-            <button class="style-btn-loto" type="button">38</button>
-            <button class="style-btn-loto" type="button">39</button>
-            <button class="style-btn-loto" type="button">40</button>
-            <button class="style-btn-loto" type="button">41</button>
-            <button class="style-btn-loto" type="button">42</button>
-            <button class="style-btn-loto" type="button">43</button>
-            <button class="style-btn-loto" type="button">44</button>
-            <button class="style-btn-loto" type="button">45</button>
-            <button class="style-btn-loto" type="button">46</button>
-            <button class="style-btn-loto" type="button">47</button>
-            <button class="style-btn-loto" type="button">48</button>
-            <button class="style-btn-loto" type="button">49</button>
-            <button class="style-btn-loto" type="button">50</button>
-        </div>
-        <h3>Chiffres étoiles</h3>
-        <div>
-            <button class="style-btn-stars" type="button">1</button>
-            <button class="style-btn-stars" type="button">2</button>
-            <button class="style-btn-stars" type="button">3</button>
-            <button class="style-btn-stars" type="button">4</button>
-            <button class="style-btn-stars" type="button">5</button>
-            <button class="style-btn-stars" type="button">6</button>
-            <button class="style-btn-stars" type="button">7</button>
-            <button class="style-btn-stars" type="button">8</button>
-            <button class="style-btn-stars" type="button">9</button>
-            <button class="style-btn-stars" type="button">10</button>
-            <button class="style-btn-stars" type="button">11</button>
-            <button class="style-btn-stars" type="button">12</button>
+        <div class="dispo-ticket-loto">
+            <div class="liste-chiffres">
+                <h3>Choisisez 5 chiffres</h3>
+                <div class="container-btn">
+                    <div class="ligne">
+                        <button class="style-btn-first" type="button">1</button>
+                        <button class="style-btn-first" type="button">2</button>
+                        <button class="style-btn-first" type="button">3</button>
+                        <button class="style-btn-first" type="button">4</button>
+                        <button class="style-btn-first" type="button">5</button>
+                        <button class="style-btn-first" type="button">6</button>
+                        <button class="style-btn-first" type="button">7</button>
+                        <button class="style-btn-first" type="button">8</button>
+                        <button class="style-btn-first" type="button">9</button>
+                        <button class="style-btn-loto" type="button">10</button>
+                    </div>
+                    <div class="ligne">
+                        <button class="style-btn-loto" type="button">11</button>
+                        <button class="style-btn-loto" type="button">12</button>
+                        <button class="style-btn-loto" type="button">13</button>
+                        <button class="style-btn-loto" type="button">14</button>
+                        <button class="style-btn-loto" type="button">15</button>
+                        <button class="style-btn-loto" type="button">16</button>
+                        <button class="style-btn-loto" type="button">17</button>
+                        <button class="style-btn-loto" type="button">18</button>
+                        <button class="style-btn-loto" type="button">19</button>
+                        <button class="style-btn-loto" type="button">20</button>
+                    </div>
+                    <div class="ligne">
+                        <button class="style-btn-loto" type="button">21</button>
+                        <button class="style-btn-loto" type="button">22</button>
+                        <button class="style-btn-loto" type="button">23</button>
+                        <button class="style-btn-loto" type="button">24</button>
+                        <button class="style-btn-loto" type="button">25</button>
+                        <button class="style-btn-loto" type="button">26</button>
+                        <button class="style-btn-loto" type="button">27</button>
+                        <button class="style-btn-loto" type="button">28</button>
+                        <button class="style-btn-loto" type="button">29</button>
+                        <button class="style-btn-loto" type="button">30</button>
+                    </div>
+                    <div class="ligne">
+                        <button class="style-btn-loto" type="button">31</button>
+                        <button class="style-btn-loto" type="button">32</button>
+                        <button class="style-btn-loto" type="button">33</button>
+                        <button class="style-btn-loto" type="button">34</button>
+                        <button class="style-btn-loto" type="button">35</button>
+                        <button class="style-btn-loto" type="button">36</button>
+                        <button class="style-btn-loto" type="button">37</button>
+                        <button class="style-btn-loto" type="button">38</button>
+                        <button class="style-btn-loto" type="button">39</button>
+                        <button class="style-btn-loto" type="button">40</button>
+                    </div>
+                    <div class="ligne">
+                        <button class="style-btn-loto" type="button">41</button>
+                        <button class="style-btn-loto" type="button">42</button>
+                        <button class="style-btn-loto" type="button">43</button>
+                        <button class="style-btn-loto" type="button">44</button>
+                        <button class="style-btn-loto" type="button">45</button>
+                        <button class="style-btn-loto" type="button">46</button>
+                        <button class="style-btn-loto" type="button">47</button>
+                        <button class="style-btn-loto" type="button">48</button>
+                        <button class="style-btn-loto" type="button">49</button>
+                        <button class="style-btn-loto" type="button">50</button>
+                    </div>
+                </div>
+            </div>
+            <div class="liste-chiffres">
+                <h3>Chiffres étoiles</h3>
+                <div>
+                    <div class="ligne">
+                        <button class="style-btn-stars-f" type="button">1</button>
+                        <button class="style-btn-stars-f" type="button">2</button>
+                        <button class="style-btn-stars-f" type="button">3</button>
+                        <button class="style-btn-stars-f" type="button">4</button>
+                        <button class="style-btn-stars-f" type="button">5</button>
+                        <button class="style-btn-stars-f" type="button">6</button>
+                        <button class="style-btn-stars-f" type="button">7</button>
+                        <button class="style-btn-stars-f" type="button">8</button>
+                        <button class="style-btn-stars-f" type="button">9</button>
+                    </div>
+                    <div class="ligne">
+                        <button class="style-btn-stars" type="button">10</button>
+                        <button class="style-btn-stars" type="button">11</button>
+                        <button class="style-btn-stars" type="button">12</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <footer class="style-footer">
@@ -162,6 +182,7 @@
         <p>Maxime SALINS - Copyright © 2024 - Tous droits réservés</p>
     </footer>
     <script src="asset/js/bg-menu.js"></script>
-    <script src="asset/js/loto.js"></script>
+    <script src="asset/js/js-loto/loto-style.js"></script>
+    <script src="asset/js/js-loto/loto.js"></script>
 </body>
 </html>
