@@ -10,3 +10,19 @@ const sectionJeu = document.querySelector(".section-jeu");
 btnJeu.addEventListener("click", ()=>{
     sectionJeu.classList.add("valid");
 });
+
+const btnNumber = document.getElementsByClassName("style-btn-loto");
+const btnNumberfirst = document.getElementsByClassName("style-btn-first");
+// console.log(btnNumber);
+
+for (let i = 0; i < btnNumber.length; i++) {
+    btnNumber[i].addEventListener("click", ()=>{
+        btnNumber[i].classList.toggle("active");
+    });
+};
+
+for (let i = 0; i < btnNumberfirst.length; i++) {
+    btnNumberfirst[i].addEventListener("click", ()=>{
+        btnNumberfirst[i].classList.toggle("active");
+    });
+};
