@@ -61,6 +61,7 @@
 
 .section-jeu{
     display: none;
+    margin: 0% 3%;
 }
 
 .section-jeu.valid{
@@ -75,18 +76,10 @@
     margin: 1.5%;
 }
 
-.style-btn-first{
-    padding: 2% 2.74%;
-    border-radius: 300%;
-    color: white;
-    font-weight: bold;
-    background-color: #1D3D51;
-    border: none;
-    cursor: pointer;
-}
+/*------------- Style bouton 5 chiffres ----------*/
 
 .style-btn-loto{
-    padding: 2% 2%;
+    padding: 100% 100%;
     border-radius: 300%;
     color: white;
     font-weight: bold;
@@ -95,8 +88,10 @@
     cursor: pointer;
 }
 
+/*------------- Style bouton chiffres stars ----------*/
+
 .style-btn-stars{
-    padding: 2% 2%;
+    padding: 100% 100%;
     border-radius: 300%;
     color: black;
     font-weight: bold;
@@ -105,18 +100,10 @@
     cursor: pointer;
 }
 
-.style-btn-stars-f{
-    padding: 2% 2.5%;
-    border-radius: 300%;
-    color: black;
-    font-weight: bold;
-    background-color: #F5ED42;
-    border: none;
-    cursor: pointer;
-}
+/*------------- Style bouton active ------------*/
 
 .active{
-    padding: 2% 2%;
+    padding: 100% 100%;
     border-radius: 300%;
     color: black;
     font-weight: bold;

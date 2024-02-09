@@ -17,44 +17,52 @@ const lotoNumber = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,
 const starNumber = [1,2,3,4,5,6,7,8,9,10,11,12];
 
 //Pointage des zones ou nous devons mettre les boutons
+
 let firstLigne = document.getElementById("ligne-N1");
 let secondLigne = document.getElementById("ligne-N2");
 let thirdLigne = document.getElementById("ligne-N3");
 let fourthLigne = document.getElementById("ligne-N4");
 let fifthLigne = document.getElementById("ligne-N5");
+let sixthLigne = document.getElementById("ligne-N6");
 let starLigne1 = document.getElementById("ligne-S1");
 let starLigne2 = document.getElementById("ligne-S2");
 
 //Boucle for pour générer les boutons (5 chiffres à choisir)
+
 for (let i = 0; i < lotoNumber.length; i++) {
-    if (lotoNumber[i] <= 10){
+    if (lotoNumber[i] <= 9){
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-first" type="button">${lotoNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-loto" type="button">0${lotoNumber[i]}</button>`;
         firstLigne.appendChild(div);
-    } else if (lotoNumber[i] <= 20) {
+    } else if (lotoNumber[i] <= 18) {
         let div = document.createElement('div');
         div.innerHTML = `<button class="style-btn-loto" type="button">${lotoNumber[i]}</button>`;
         secondLigne.appendChild(div);
-    } else if (lotoNumber[i] <= 30) {
+    } else if (lotoNumber[i] <= 27) {
         let div = document.createElement('div');
         div.innerHTML = `<button class="style-btn-loto" type="button">${lotoNumber[i]}</button>`;
         thirdLigne.appendChild(div);
-    } else if (lotoNumber[i] <= 40) {
+    } else if (lotoNumber[i] <= 36) {
         let div = document.createElement('div');
         div.innerHTML = `<button class="style-btn-loto" type="button">${lotoNumber[i]}</button>`;
         fourthLigne.appendChild(div);
-    } else {
+    } else if (lotoNumber[i] <= 45) {
         let div = document.createElement('div');
         div.innerHTML = `<button class="style-btn-loto" type="button">${lotoNumber[i]}</button>`;
         fifthLigne.appendChild(div);
+    } else {
+        let div = document.createElement('div');
+        div.innerHTML = `<button class="style-btn-loto" type="button">${lotoNumber[i]}</button>`;
+        sixthLigne.appendChild(div);
     }
 }
 
 //Boucle for pour générer les boutons (2 chiffres étoiles)
+
 for (let i = 0; i < starNumber.length; i++) {
     if (starNumber[i] < 10){
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-stars-f" type="button">${starNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-stars" type="button">0${starNumber[i]}</button>`;
         starLigne1.appendChild(div);
     } else {
         let div = document.createElement('div');
@@ -63,8 +71,10 @@ for (let i = 0; i < starNumber.length; i++) {
     } 
 }
 
+//Selection des boutons : Choix utilisateur
+
 const btnNumber = document.getElementsByClassName("style-btn-loto");
-const btnNumberfirst = document.getElementsByClassName("style-btn-first");
+const btnStars = document.getElementsByClassName("style-btn-stars");
 // console.log(btnNumber);
 
 for (let i = 0; i < btnNumber.length; i++) {
@@ -73,8 +83,8 @@ for (let i = 0; i < btnNumber.length; i++) {
     });
 };
 
-for (let i = 0; i < btnNumberfirst.length; i++) {
-    btnNumberfirst[i].addEventListener("click", ()=>{
-        btnNumberfirst[i].classList.toggle("active");
-    });
-};
+for (let i = 0; i < btnStars.length; i++) {
+    btnStars[i].addEventListener("click", ()=>{
+        btnStars[i].classList.toggle("active");
+    })
+}
