@@ -77,14 +77,19 @@ const btnNumber = document.getElementsByClassName("style-btn-loto");
 const btnStars = document.getElementsByClassName("style-btn-stars");
 // console.log(btnNumber);
 
-for (let i = 0; i < btnNumber.length; i++) {
-    btnNumber[i].addEventListener("click", ()=>{
-        btnNumber[i].classList.toggle("active");
-    });
+//fonction permettant d'ajouter la class active
+function addActive(array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i].addEventListener("click", ()=>{
+            array[i].classList.toggle("active");
+        });
+    };
 };
 
-for (let i = 0; i < btnStars.length; i++) {
-    btnStars[i].addEventListener("click", ()=>{
-        btnStars[i].classList.toggle("active");
-    })
-}
+//Rappel de la fonction addActive
+addActive(btnNumber);
+addActive(btnStars);
+
+//Il faut pointer les boutons qui onts la class "active"
+//Il faut récupérer les valeurs des boutons sélectionnés
+//Implémenter ses valeurs dans un tableaux userListe
