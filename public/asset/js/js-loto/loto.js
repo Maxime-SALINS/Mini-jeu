@@ -1,31 +1,31 @@
 // Jeu du loto
 
-function LotoGames (number , starnumber) {
-    let RandomArray = [];
-    let StarRandomArray = [];
-    
-    while (RandomArray.length < number) {
-        let RandomNumber = Math.floor(Math.random()*(50 - 1)+ 1);
-        let NumberCheck = RandomArray[RandomArray.indexOf(RandomNumber)]
-        if (RandomNumber !== NumberCheck) {
-            RandomArray.push(RandomNumber);
-        }
-    }
-    
-    while (StarRandomArray.length < starnumber) {
-        let RandomNumber = Math.floor(Math.random()*(12 - 1)+ 1);
-        let NumberCheck = StarRandomArray[StarRandomArray.indexOf(RandomNumber)]
-        if (RandomNumber !== NumberCheck) {
-            StarRandomArray.push(RandomNumber);
-        }
-    }
-    
-    console.log(RandomArray);
-    console.log(StarRandomArray);
-};
+//Rappel des tableaux de l'utilisateur
+/**
+ * @param {Array} userNumber
+ * @param {Array} userStars
+*/
 
-function lotoPlay() {
-    let UserChoice = window.parseInt(prompt("Combien de chiffre voulez-vous générer aléatoirement ?"));
-    let User = window.parseInt(prompt("Combien de chiffre étoiles voulez-vous générer aléatoirement ?"));
-    LotoGames(UserChoice , User);
-};
+//Initialisation des tableaux qui seront générés par l'IA
+let RandomArray = [];
+let StarRandomArray = [];
+
+//Création des listes de nombre
+while (RandomArray.length < 5) {
+    let RandomNumber = Math.floor(Math.random()*(50 - 1)+ 1);
+    let NumberCheck = RandomArray[RandomArray.indexOf(RandomNumber)]
+    if (RandomNumber !== NumberCheck) {
+        RandomArray.push(RandomNumber);
+    }
+}
+
+while (StarRandomArray.length < 2) {
+    let RandomNumber = Math.floor(Math.random()*(12 - 1)+ 1);
+    let NumberCheck = StarRandomArray[StarRandomArray.indexOf(RandomNumber)]
+    if (RandomNumber !== NumberCheck) {
+        StarRandomArray.push(RandomNumber);
+    }
+}
+
+console.log(RandomArray);
+console.log(StarRandomArray);
