@@ -32,27 +32,27 @@ let starLigne2 = document.getElementById("ligne-S2");
 for (let i = 0; i < lotoNumber.length; i++) {
     if (lotoNumber[i] <= 9){
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-loto" type="button">0${lotoNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-loto" type="button" value="${lotoNumber[i]}">0${lotoNumber[i]}</button>`;
         firstLigne.appendChild(div);
     } else if (lotoNumber[i] <= 18) {
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-loto" type="button">${lotoNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-loto" type="button" value="${lotoNumber[i]}">${lotoNumber[i]}</button>`;
         secondLigne.appendChild(div);
     } else if (lotoNumber[i] <= 27) {
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-loto" type="button">${lotoNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-loto" type="button" value="${lotoNumber[i]}">${lotoNumber[i]}</button>`;
         thirdLigne.appendChild(div);
     } else if (lotoNumber[i] <= 36) {
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-loto" type="button">${lotoNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-loto" type="button" value="${lotoNumber[i]}">${lotoNumber[i]}</button>`;
         fourthLigne.appendChild(div);
     } else if (lotoNumber[i] <= 45) {
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-loto" type="button">${lotoNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-loto" type="button" value="${lotoNumber[i]}">${lotoNumber[i]}</button>`;
         fifthLigne.appendChild(div);
     } else {
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-loto" type="button">${lotoNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-loto" type="button" value="${lotoNumber[i]}">${lotoNumber[i]}</button>`;
         sixthLigne.appendChild(div);
     }
 }
@@ -62,11 +62,11 @@ for (let i = 0; i < lotoNumber.length; i++) {
 for (let i = 0; i < starNumber.length; i++) {
     if (starNumber[i] < 10){
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-stars" type="button">0${starNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-stars" type="button" value="${starNumber[i]}">0${starNumber[i]}</button>`;
         starLigne1.appendChild(div);
     } else {
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-stars" type="button">${starNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-stars" type="button" value="${starNumber[i]}">${starNumber[i]}</button>`;
         starLigne2.appendChild(div);
     } 
 }
@@ -75,7 +75,6 @@ for (let i = 0; i < starNumber.length; i++) {
 
 const btnNumber = document.getElementsByClassName("style-btn-loto");
 const btnStars = document.getElementsByClassName("style-btn-stars");
-// console.log(btnNumber);
 
 //fonction permettant d'ajouter la class active
 function addActive(array) {
@@ -90,6 +89,25 @@ function addActive(array) {
 addActive(btnNumber);
 addActive(btnStars);
 
-//Il faut pointer les boutons qui onts la class "active"
-//Il faut récupérer les valeurs des boutons sélectionnés
-//Implémenter ses valeurs dans un tableaux userListe
+//Pointage du bouton de validation des listes
+const btnValid = document.getElementById('btnValid');
+
+// Initialisation des tableaux choix utilisateur
+let userNumber = [];
+let userStars = [];
+
+// Ecoute de l'évennement au click sur le bouton Valider
+function validListe(btn , array , userarray) {
+    btn.addEventListener("click", ()=>{
+        for (let i = 0; i < array.length; i++) {
+            if (array[i].classList.contains("active")) {
+                userarray.push(array[i].value);
+            }
+        }
+    })
+}
+
+validListe(btnValid, btnNumber , userNumber);
+validListe(btnValid, btnStars, userStars);
+console.log(userNumber);
+console.log(userStars);
