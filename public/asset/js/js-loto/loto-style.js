@@ -109,5 +109,8 @@ function validListe(btn , array , userarray) {
 
 validListe(btnValid, btnNumber , userNumber);
 validListe(btnValid, btnStars, userStars);
-console.log(userNumber);
-console.log(userStars);
+// console.log(userNumber);
+// console.log(userStars);
+
+//On export les données des tableaux userNumber et userStars
+export{userNumber, userStars};

@@ -1,10 +1,9 @@
 // Jeu du loto
 
 //Rappel des tableaux de l'utilisateur
-/**
- * @param {Array} userNumber
- * @param {Array} userStars
-*/
+import {userNumber, userStars} from "./loto-style";
+console.log(userNumber);
+console.log(userStars);
 
 //Initialisation des tableaux qui seront générés par l'IA
 let RandomArray = [];
