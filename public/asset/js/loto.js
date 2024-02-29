@@ -1,10 +1,8 @@
+// Jeu du loto
 // Pointage du bouton pour jouer et de la section à modifier
 
 const btnJeu = document.getElementById("btnJeu");
-// console.log(btnJeu);
-
 const sectionJeu = document.querySelector(".section-jeu");
-// console.log(sectionJeu);
 
 // Ecoute d'un événement au click
 btnJeu.addEventListener("click", ()=>{
@@ -12,12 +10,7 @@ btnJeu.addEventListener("click", ()=>{
 });
 
 //Affichage des boutons du tickets de loto de manière dynamique
-//Initialisation des données
-const lotoNumber = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50];
-const starNumber = [1,2,3,4,5,6,7,8,9,10,11,12];
-
 //Pointage des zones ou nous devons mettre les boutons
-
 let firstLigne = document.getElementById("ligne-N1");
 let secondLigne = document.getElementById("ligne-N2");
 let thirdLigne = document.getElementById("ligne-N3");
@@ -28,45 +21,44 @@ let starLigne1 = document.getElementById("ligne-S1");
 let starLigne2 = document.getElementById("ligne-S2");
 
 //Boucle for pour générer les boutons (5 chiffres à choisir)
-
-for (let i = 0; i < lotoNumber.length; i++) {
-    if (lotoNumber[i] <= 9){
+for (let i = 0; i < 50; i++) {
+    if (i+1 <= 9){
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-loto" type="button" value="${lotoNumber[i]}">0${lotoNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-loto" type="button" value="${i+1}">0${i+1}</button>`;
         firstLigne.appendChild(div);
-    } else if (lotoNumber[i] <= 18) {
+    } else if (i+1 <= 18) {
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-loto" type="button" value="${lotoNumber[i]}">${lotoNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-loto" type="button" value="${i+1}">${i+1}</button>`;
         secondLigne.appendChild(div);
-    } else if (lotoNumber[i] <= 27) {
+    } else if (i+1 <= 27) {
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-loto" type="button" value="${lotoNumber[i]}">${lotoNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-loto" type="button" value="${i+1}">${i+1}</button>`;
         thirdLigne.appendChild(div);
-    } else if (lotoNumber[i] <= 36) {
+    } else if (i+1 <= 36) {
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-loto" type="button" value="${lotoNumber[i]}">${lotoNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-loto" type="button" value="${i+1}">${i+1}</button>`;
         fourthLigne.appendChild(div);
-    } else if (lotoNumber[i] <= 45) {
+    } else if (i+1 <= 45) {
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-loto" type="button" value="${lotoNumber[i]}">${lotoNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-loto" type="button" value="${i+1}">${i+1}</button>`;
         fifthLigne.appendChild(div);
     } else {
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-loto" type="button" value="${lotoNumber[i]}">${lotoNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-loto" type="button" value="${i+1}">${i+1}</button>`;
         sixthLigne.appendChild(div);
     }
 }
 
 //Boucle for pour générer les boutons (2 chiffres étoiles)
 
-for (let i = 0; i < starNumber.length; i++) {
-    if (starNumber[i] < 10){
+for (let i = 0; i < 12; i++) {
+    if (i+1 < 10){
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-stars" type="button" value="${starNumber[i]}">0${starNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-stars" type="button" value="${i+1}">0${i+1}</button>`;
         starLigne1.appendChild(div);
     } else {
         let div = document.createElement('div');
-        div.innerHTML = `<button class="style-btn-stars" type="button" value="${starNumber[i]}">${starNumber[i]}</button>`;
+        div.innerHTML = `<button class="style-btn-stars" type="button" value="${i+1}">${i+1}</button>`;
         starLigne2.appendChild(div);
     } 
 }
@@ -101,7 +93,7 @@ function validListe(btn , array , userarray) {
     btn.addEventListener("click", ()=>{
         for (let i = 0; i < array.length; i++) {
             if (array[i].classList.contains("active")) {
-                userarray.push(array[i].value);
+                userarray.push(parseInt(array[i].value));
             }
         }
     })
@@ -109,8 +101,26 @@ function validListe(btn , array , userarray) {
 
 validListe(btnValid, btnNumber , userNumber);
 validListe(btnValid, btnStars, userStars);
-// console.log(userNumber);
-// console.log(userStars);
 
-//On export les données des tableaux userNumber et userStars
-export{userNumber, userStars};
+//Initialisation des tableaux qui seront générés par l'IA
+let RandomArray = [];
+let StarRandomArray = [];
+
+//Création des listes de nombre
+while (RandomArray.length < 5) {
+    let RandomNumber = Math.floor(Math.random()*(50 - 1)+ 1);
+    let NumberCheck = RandomArray[RandomArray.indexOf(RandomNumber)]
+    if (RandomNumber !== NumberCheck) {
+        RandomArray.push(RandomNumber);
+    }
+}
+
+while (StarRandomArray.length < 2) {
+    let RandomNumber = Math.floor(Math.random()*(12 - 1)+ 1);
+    let NumberCheck = StarRandomArray[StarRandomArray.indexOf(RandomNumber)]
+    if (RandomNumber !== NumberCheck) {
+        StarRandomArray.push(RandomNumber);
+    }
+}
+
+//Comparaison de chaque tableau
