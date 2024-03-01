@@ -140,6 +140,14 @@
     margin: 3% 0%;
 }
 
+/*------------------ Style disable button -----------------*/
+
+.disable{
+    padding: 100% 100%;
+    background-color: gray;
+
+}
+
 /*------------------ Responsive de la page ----------------*/
 
 @media  screen and (max-width: 768px){

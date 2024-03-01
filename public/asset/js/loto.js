@@ -69,17 +69,27 @@ const btnNumber = document.getElementsByClassName("style-btn-loto");
 const btnStars = document.getElementsByClassName("style-btn-stars");
 
 //fonction permettant d'ajouter la class active
-function addActive(array) {
-    for (let i = 0; i < array.length; i++) {
-        array[i].addEventListener("click", ()=>{
-            array[i].classList.toggle("active");
-        });
-    };
-};
 
-//Rappel de la fonction addActive
-addActive(btnNumber);
-addActive(btnStars);
+let numberActif = [];
+
+for (let i = 0; i < btnNumber.length; i++) {
+    btnNumber[i].addEventListener("click", ()=>{
+        if (!btnNumber[i].classList.contains("disable")){
+            btnNumber[i].classList.add("active");
+            if (btnNumber[i].classList.contains("active") && !numberActif.includes(btnNumber[i].value)){
+                numberActif.push(parseInt(btnNumber[i].value));
+                console.log(numberActif);
+            }
+        }
+        if (numberActif.length == 5){
+            for (let j = 0; j < btnNumber.length; j++) {
+                if (!btnNumber[j].classList.contains("active")) {
+                    btnNumber[j].classList.add("disable");
+                }
+            }
+        }
+    });
+};
 
 //Pointage du bouton de validation des listes
 const btnValid = document.getElementById('btnValid');
@@ -95,6 +105,9 @@ function validListe(btn , array , userarray) {
             if (array[i].classList.contains("active")) {
                 userarray.push(parseInt(array[i].value));
             }
+        }
+        if (userarray.length = 5){
+
         }
     })
 }
