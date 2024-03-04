@@ -7,6 +7,7 @@ const sectionJeu = document.querySelector(".section-jeu");
 // Ecoute d'un événement au click
 btnJeu.addEventListener("click", ()=>{
     sectionJeu.classList.add("valid");
+    btnJeu.classList.add("display-btn");
 });
 
 //Affichage des boutons du tickets de loto de manière dynamique
@@ -68,20 +69,20 @@ for (let i = 0; i < 12; i++) {
 const btnNumber = document.getElementsByClassName("style-btn-loto");
 const btnStars = document.getElementsByClassName("style-btn-stars");
 
-//fonction permettant d'ajouter la class active
+//Ajout des boutons sélectionner par l'utilisateur dans les tableaux userNumber & usersStars
 
-let numberActif = [];
+// Initialisation des tableaux choix utilisateur
+let userNumber = [];
+let userStars = [];
 
 for (let i = 0; i < btnNumber.length; i++) {
     btnNumber[i].addEventListener("click", ()=>{
-        if (!btnNumber[i].classList.contains("disable")){
+        if (!btnNumber[i].classList.contains("disable") && !btnNumber[i].classList.contains("active")){
             btnNumber[i].classList.add("active");
-            if (btnNumber[i].classList.contains("active") && !numberActif.includes(btnNumber[i].value)){
-                numberActif.push(parseInt(btnNumber[i].value));
-                console.log(numberActif);
-            }
+            userNumber.push(parseInt(btnNumber[i].value));
+            console.log(userNumber);
         }
-        if (numberActif.length == 5){
+        if (userNumber.length == 5){
             for (let j = 0; j < btnNumber.length; j++) {
                 if (!btnNumber[j].classList.contains("active")) {
                     btnNumber[j].classList.add("disable");
@@ -91,29 +92,22 @@ for (let i = 0; i < btnNumber.length; i++) {
     });
 };
 
-//Pointage du bouton de validation des listes
-const btnValid = document.getElementById('btnValid');
-
-// Initialisation des tableaux choix utilisateur
-let userNumber = [];
-let userStars = [];
-
-// Ecoute de l'évennement au click sur le bouton Valider
-function validListe(btn , array , userarray) {
-    btn.addEventListener("click", ()=>{
-        for (let i = 0; i < array.length; i++) {
-            if (array[i].classList.contains("active")) {
-                userarray.push(parseInt(array[i].value));
+for (let i = 0; i < btnStars.length; i++) {
+    btnStars[i].addEventListener("click", ()=>{
+        if (!btnStars[i].classList.contains("disable") && !btnStars[i].classList.contains("active")){
+            btnStars[i].classList.add("active");
+            userStars.push(parseInt(btnStars[i].value));
+            // console.log(userStars);
+        }
+        if (userStars.length == 2){
+            for (let j = 0; j < btnStars.length; j++) {
+                if (!btnStars[j].classList.contains("active")) {
+                    btnStars[j].classList.add("disable");
+                }
             }
         }
-        if (userarray.length = 5){
-
-        }
-    })
-}
-
-validListe(btnValid, btnNumber , userNumber);
-validListe(btnValid, btnStars, userStars);
+    });
+};
 
 //Initialisation des tableaux qui seront générés par l'IA
 let RandomArray = [];
@@ -136,4 +130,40 @@ while (StarRandomArray.length < 2) {
     }
 }
 
+// console.log(RandomArray);
+// console.log(StarRandomArray);
+
 //Comparaison de chaque tableau
+function lotoGames() {
+    for (let i = 0; i < userNumber.length; i++) {
+        let chekNumber = RandomArray[RandomArray.indexOf(userNumber[i])];
+        if (userNumber[i] !== chekNumber){
+            alert("Perdu");
+        } else {
+            alert ("c'est ok");
+        }
+    }
+
+    for (let i = 0; i < userStars.length; i++) {
+        let chekNumber = StarRandomArray[StarRandomArray.indexOf(userStars[i])];
+        if (userStars[i] !== chekNumber){
+            alert("Perdu");
+        } else {
+            alert ("c'est ok");
+        }
+    }
+}
+
+//Pointage du bouton de validation des listes
+const btnValid = document.getElementById('btnValid');
+
+//Ecoute de l'évennement au click du bouton valide pour lancer le jeu
+btnValid.addEventListener("click", ()=>{
+    if(userNumber.length === 5 && userStars.length === 2) {
+        alert ("Vous pouvez jouer")
+        lotoGames()
+    } else{
+        alert ("Vous devez sélectionner 5 chiffres et 2 chiffres étoiles")
+    }
+})
+

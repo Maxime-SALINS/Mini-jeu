@@ -57,6 +57,10 @@
     border: 2px solid black;
 }
 
+.display-btn {
+    display: none;
+}
+
 /*------------------ Style grille du loto ------------------*/
 
 .section-jeu{
