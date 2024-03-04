@@ -54,7 +54,7 @@
             <button id="btnJeu" class="style-btn" type="button">Jouer</button>
         </div>
     </section>
-    <section class="section-jeu">
+    <section id="section_ticket" class="section-jeu">
         <h2>Ticket</h2>
         <div class="dispo-ticket-loto">
             <div class="liste-chiffres">
@@ -79,6 +79,20 @@
         <div class="dispo-btn">
             <button id="btnValid" class="style-btn" type="button">Valider</button>
         </div>
+    </section>
+    <section id="section_result" class="section-jeu">
+        <h2>Résultats</h2>
+        <div class="dispo-result">
+            <div class="view">
+                <h3>Votre Ticket</h3>
+                <div id="user-ticket" class="view_result"></div>
+            </div>
+            <div class="view">
+                <h3>Tirage</h3>
+                <div id="tirage" class="view_result"></div>
+            </div>
+        </div>
+        <div id="view_message"></div>
     </section>
     <footer class="style-footer">
         <h2>Merci d'être venu sur le site !</h2>

@@ -152,6 +152,55 @@
 
 }
 
+/*------------------ Style grille de résultat ------------------*/
+
+.dispo-result{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.view{
+    width: 50%;
+}
+
+.view > h3 {
+    text-align: center;
+    font-family: 'Bungee', sans-serif;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    margin: 1.5%;
+}
+
+.view_result{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0% 2%;
+    background-color: white;
+    padding: 2%;
+}
+
+.style_span{
+    color: black;
+    font-weight: bolder;
+}
+
+#view_message{
+    text-align: center;
+    margin: 2% 0%;
+}
+
+.message_red{
+    color: red;
+    font-weight: bolder;
+}
+
+.message_green{
+    color: rgb(8, 85, 8);
+    font-weight: bolder;
+}
+
 /*------------------ Responsive de la page ----------------*/
 
 @media  screen and (max-width: 768px){

@@ -2,7 +2,8 @@
 // Pointage du bouton pour jouer et de la section à modifier
 
 const btnJeu = document.getElementById("btnJeu");
-const sectionJeu = document.querySelector(".section-jeu");
+const sectionJeu = document.querySelector("#section_ticket");
+const sectionResult = document.querySelector("#section_result");
 
 // Ecoute d'un événement au click
 btnJeu.addEventListener("click", ()=>{
@@ -80,7 +81,7 @@ for (let i = 0; i < btnNumber.length; i++) {
         if (!btnNumber[i].classList.contains("disable") && !btnNumber[i].classList.contains("active")){
             btnNumber[i].classList.add("active");
             userNumber.push(parseInt(btnNumber[i].value));
-            console.log(userNumber);
+            // console.log(userNumber);
         }
         if (userNumber.length == 5){
             for (let j = 0; j < btnNumber.length; j++) {
@@ -130,37 +131,66 @@ while (StarRandomArray.length < 2) {
     }
 }
 
-// console.log(RandomArray);
-// console.log(StarRandomArray);
+console.log(RandomArray);
+console.log(StarRandomArray);
 
 //Comparaison de chaque tableau
 function lotoGames() {
+    let valueValidNumber = false;
+    let valueValidStars = false;
     for (let i = 0; i < userNumber.length; i++) {
         let chekNumber = RandomArray[RandomArray.indexOf(userNumber[i])];
         if (userNumber[i] !== chekNumber){
-            alert("Perdu");
+            valueValidNumber = false;
         } else {
-            alert ("c'est ok");
+            valueValidNumber = true;
         }
     }
 
     for (let i = 0; i < userStars.length; i++) {
         let chekNumber = StarRandomArray[StarRandomArray.indexOf(userStars[i])];
         if (userStars[i] !== chekNumber){
-            alert("Perdu");
+            valueValidStars = false;
         } else {
-            alert ("c'est ok");
+            valueValidStars = true;
         }
+    }
+
+    if (!valueValidNumber && !valueValidStars) {
+        let div = document.createElement('div');
+        div.innerHTML = `<p class="message_red">Vous avez perdu !</p>`;
+        message.appendChild(div);
+    } else {
+        let div = document.createElement('div');
+        div.innerHTML = `<p class="message_green">Bravo vous avez gagnés !</p>`;
+        message.appendChild(div);
     }
 }
 
 //Pointage du bouton de validation des listes
 const btnValid = document.getElementById('btnValid');
 
+//Pointage des div pour l'affichage du résultat
+const userList = document.getElementById('user-ticket');
+const iaList = document.getElementById('tirage');
+const message = document.getElementById('view_message');
+
+function resultView(array, section) {
+    for (let i = 0; i < array.length; i++) {
+        let div = document.createElement('div');
+        div.innerHTML=`<span class="style_span">${array[i]}</span>`;
+        section.appendChild(div);
+    }
+}
+
 //Ecoute de l'évennement au click du bouton valide pour lancer le jeu
 btnValid.addEventListener("click", ()=>{
+    sectionResult.classList.add("valid");
     if(userNumber.length === 5 && userStars.length === 2) {
-        alert ("Vous pouvez jouer")
+        resultView(userNumber, userList)
+        resultView(userStars, userList)
+        resultView(RandomArray, iaList)
+        resultView(StarRandomArray, iaList)
         lotoGames()
     } else{
         alert ("Vous devez sélectionner 5 chiffres et 2 chiffres étoiles")
