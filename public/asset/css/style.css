@@ -42,6 +42,38 @@ body{
     border-radius: 300%;
 }
 
+/*--------------------- Style bouton connexion/inscription -----------------*/
+
+.dispo-co-sub {
+    position: absolute;
+    top: 15%;
+    right: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.btn-con , .btn-sub{
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Bungee', sans-serif;
+    padding: 3% 2%;
+    margin: 0% 2%;
+    cursor: pointer;
+}
+
+.btn-con{
+    border-radius: 15px 0px 0px 15px;
+    background-color: #ED017F;
+    border: 1px solid #ED017F;
+}
+
+.btn-sub{
+    border-radius: 0px 15px 15px 0px;
+    background-color: #0367A6;
+    border: 1px solid #0367A6;
+}
+
+
 /*---------------- Style barre de navigation ---------------------*/
 
 .navbar-header{
@@ -89,10 +121,14 @@ body{
 
 .section-pres{
     background-image: url(../image/logo/banniere-minijeu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 180px;
+    padding-bottom: 180px;
 }
 
 .box{
@@ -170,11 +206,10 @@ body{
     position: absolute;
     top: 50% ;
     left: 8%;
-    font-family: 'Bungee', sans-serif;
-    background-color: #A503A6;
-    border: 2px solid black;
-    border-radius: 50px;
-    padding: 0.5%;
+    background-color: #0367A6;
+    border: 1px solid #0367A6;
+    color: #eee;
+    font-size: 500%;
     transform: translate(-50% , -50%);
     cursor: pointer;
 }
@@ -183,11 +218,10 @@ body{
     position: absolute;
     top: 50%;
     right: 5%;
-    font-family: 'Bungee', sans-serif;
-    background-color: #A503A6;
-    border: 2px solid black;
-    border-radius: 50px;
-    padding: 0.5%;
+    background-color: #0367A6;
+    border: 1px solid #0367A6;
+    color: #eee;
+    font-size: 500%;
     transform: translate(-50% , -50%);
     cursor: pointer;
 }
@@ -199,8 +233,8 @@ body{
 }
 
 #next:hover , #prev:hover{
-    text-shadow: 2px 2px 4px #F5ED42;
-    border: 4px solid black;
+    text-shadow: 2px 2px 4px black;
+    color: #09D4C1;
 }
 
 .infojeu::before,
@@ -278,7 +312,7 @@ body{
 
 #img-perso{
     width: 100%;
-    border-radius: 300%;
+    border-radius: 50%;
 }
 
 /*------------ Animation bordre image -----------------*/
